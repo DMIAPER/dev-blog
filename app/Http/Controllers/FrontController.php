@@ -8,14 +8,11 @@ use Carbon\Carbon;
 use App\Category;
 use App\Tag;
 
-class FrontController extends Controller
-{
-
-	public function __construct(){
+class FrontController extends Controller{
+    public function __construct(){
 
 		Carbon::setLocale('es');
 	}
-
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +35,7 @@ class FrontController extends Controller
 
     }
 
-     public function all(Request $request){
+    public function all(Request $request){
          $categories = Category::orderBy('id','DESC')->get();
          $tags = Tag::orderBy('id','DESC')->get();
 
@@ -57,6 +54,7 @@ class FrontController extends Controller
             ->with('tags',$tags);
     }
 
+    //visualizar pagina videos
     public function videos(Request $request){
 
         $categories = Category::orderBy('id','DESC')->get();
@@ -72,6 +70,42 @@ class FrontController extends Controller
         return view('front.template.partials.videos')
             ->with('articles',$articles)
             ->with('categories',$categories)
+            ->with('tags',$tags);
+    }
+
+    //visualizar pagina sobre nosotros
+    public function sobreNosotros(Request $request){
+
+        $tags = Tag::orderBy('id','DESC')->get();
+
+        return view('front.template.partials.quien')
+            ->with('tags',$tags);
+    }
+
+    //visualiza pagina desarrolloweb
+    public function desarrollo(Request $request){
+
+        $tags = Tag::orderBy('id','DESC')->get();
+
+        return view('front.template.partials.desarrollo')
+            ->with('tags',$tags);
+    }
+
+    //visualizar pagina sobre contacto
+    public function contacto(Request $request){
+
+        $tags = Tag::orderBy('id','DESC')->get();
+
+        return view('front.template.partials.contacto')
+            ->with('tags',$tags);
+    }
+
+    //visualizar pagina politicas
+    public function politicas(Request $request){
+
+        $tags = Tag::orderBy('id','DESC')->get();
+
+        return view('front.template.partials.politicas')
             ->with('tags',$tags);
     }
 
@@ -92,7 +126,7 @@ class FrontController extends Controller
             ->with('tags',$tags);
     }
 
-     public function searchTag($name){
+    public function searchTag($name){
 
          $categories = Category::orderBy('id','DESC')->get();
          $articles = Article::orderBy('id','DESC')->get();
@@ -127,5 +161,6 @@ class FrontController extends Controller
             ->with('tags',$tags);
 
     }
+
 
 }

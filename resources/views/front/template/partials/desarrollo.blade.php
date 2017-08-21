@@ -1,4 +1,5 @@
 @extends('front.template.main')
+
 @section('content')
     <div class="container container-default">
         <div class="row">

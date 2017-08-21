@@ -3,11 +3,20 @@
 <head>
 
 	<meta charset="UTF-8">
-	<meta charset="UTF-8">
-	<meta name="keywords" content="cursos programacion informatica php desarrollo diseño java html5 tutoriales">
+	<script>
+		document.write('<meta name="keybwords" content="');
+
+		@foreach ($tags as $tag)
+            {{ route('front.search.tag',$tag->name) }}
+			document.write('{{$tag->name}}');
+		@endforeach
+		document.write('">');
+
+	</script>
+
 	<meta name="description" content="Tutoriales y cursos de desarrollo y diseño de aplicaciones web moviles y escritorio, aprenderás todo lo relacionado con programacion ">
 	<meta name="author" content="Dev3Apss">
-	<meta name="copyright" content="dev3Apps">
+	<meta name="copyright" content="Dev3Apps">
 	<meta name="robots" content="index, follow">
 
 	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
@@ -29,7 +38,6 @@
 
 		//lista de palabras del "userAgent" en los móviles
 		moviles=["iPhone","iPod","iPad","Android"];
-
 		detector=0; //Variable que detectará si se usa un móvil
 
 		for (i in moviles) { //comprobar en la lista ...
@@ -42,18 +50,16 @@
 
 		if (detector==1) { //si es un móvil redirecciono la página.
 			document.write('<link rel="stylesheet" href="" type="text/css">');
-			alert("soy un movil");
 		}else{
-			alert("soy una pantalla de portatil");
 			document.write('<link rel="stylesheet" href="{{asset('css/pcpequeña.css')}}" type="text/css" media="(max-width:1199px) and (min-width:255px)">');
 			document.write('<link rel="stylesheet" href="{{asset('css/pc.css')}}" type="text/css" media="screen and (max-width:3600px) and (min-width:1200px)">');
 		}
 
 	</script>
+
 </head>
 	
-<body>	
-	    
+<body>
    @include('front.template.partials.cookies')
 <header>
 	@include('front.template.partials.header')	

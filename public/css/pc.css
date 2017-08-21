@@ -1,3 +1,13 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    margin:0 0 204px;
+}
+
+
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
     margin-bottom: 0;
@@ -5,21 +15,67 @@
 
 }
 
+
+
 /* Add a gray background color and some padding to the footer */
 footer {
     margin:0;
     padding: 0;
+
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    height: 204px;
+
     background: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: rgba(204, 204, 204, 0.75);
 }
 
 footer h4{
-    text-decoration: underline;
+    color:white;
 }
 
-body{
+.footerdes{
+    color: white;
+    text-align: justify;
+    margin:0;
+    margin-bottom: 20px;
+    padding:0;
+    padding: 10px;
+
+    border-bottom: solid 1px;
+    border-bottom-color: white;
 
 }
+
+.footerlinks{
+    margin:0;
+    padding:0;
+    margin-top: 10px;
+}
+
+.footerlinks li{
+    margin:0;
+    padding:0;
+    margin-left:-40px;
+    list-style: none;
+    text-align: left;
+    position: relative;
+}
+
+.footerlinks li:hover{
+    color:white;
+    background: none;
+}
+
+.copyrigth{
+    margin: 0;
+    padding:0;
+    margin-top: 30px;
+    text-align: right
+;
+}
+
 
 .span12{
     float: left;

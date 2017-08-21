@@ -1,3 +1,91 @@
-footer{
-    background: red;
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    margin:0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(204, 204, 204, 0.75);
 }
+
+footer h4{
+    color:white;
+}
+
+.footerdes{
+    color: white;
+    text-align: justify;
+    margin:0;
+    margin-bottom: 20px;
+    padding:0;
+    padding: 10px;
+
+    border-bottom: solid 1px;
+    border-bottom-color: white;
+
+}
+
+.footerlinks{
+    margin:0;
+    padding:0;
+    margin-top: 10px;
+}
+
+.footerlinks li{
+    margin:0;
+    padding:0;
+    margin-left:-40px;
+    list-style: none;
+    text-align: left;
+    position: relative;
+}
+
+.footerlinks li:hover{
+    color:white;
+    background: none;
+}
+
+.copyrigth{
+    margin: 0;
+    padding:0;
+    margin-top: 30px;
+    text-align: right
+;
+}
+body{
+
+}
+
+.span12{
+    float: left;
+    margin-top: 5px;
+    text-align: center;
+}
+.span13{
+    float: left;
+    margin-top: 0;
+    text-align: center;
+
+}
+.div-head{
+    margin-top: 0;
+}
+
+#myNavbar{
+    padding-bottom: 0;
+}
+.logo{
+    padding: 1em;
+}
+.title-front-header{
+    padding: 0.5em;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2em;
+
+}
+.somos{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.75em;
+    font-weight: bold;
+
+}
+

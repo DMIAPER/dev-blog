@@ -9,9 +9,8 @@
 		<link rel="stylesheet" href="{{asset('plugins/chosen/chosen.css')}}">
 		<link rel="stylesheet" href="{{asset('css/trumbowyg.css')}}">
 
-
-
 </head>
+
 <body>	
 
 	<div class="container-fluid">

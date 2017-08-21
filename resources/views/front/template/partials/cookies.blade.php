@@ -123,7 +123,7 @@
         Si sigues navegando por nuestro contenido aceptas las condiciones.
         <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><input type="button" class="btn btn-primary" value="Cerrar"></a>
         <br/>
-        <a href="{{route('front.template.partials.politicaCookies')}}" target="_blank" class="info">Más información sobre las Cookies</a>
+        <a href="{{route('front.template.partials.politicas')}}" target="_blank" class="info">Más información sobre las Cookies</a>
     </div>
 </div>
  

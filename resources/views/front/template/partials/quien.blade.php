@@ -1,6 +1,7 @@
 @extends('front.template.main')
+
 @section('content')
-<div class="container container-default">
+    <div class="container container-default">
    <div class="row">
        <div class="col col-md-10">
            <div class="panel panel-default">
